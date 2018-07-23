@@ -19,6 +19,7 @@ package com.github.ksoichiro.android.observablescrollview.samples;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -71,6 +72,7 @@ public class FlexibleSpaceToolbarScrollViewActivity extends BaseActivity impleme
 
     @Override
     public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging) {
+        Log.e("test", "onScrollChanged: "+scrollY);
         updateFlexibleSpaceText(scrollY);
     }
 

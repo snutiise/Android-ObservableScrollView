@@ -1,5 +1,16 @@
 apply plugin: 'com.android.library'
 
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.1.0"
+    }
+}
+
 dependencies {
     compile 'com.android.support:recyclerview-v7:23.1.1'
     androidTestCompile ('com.android.support:appcompat-v7:23.1.1') {
@@ -53,4 +64,5 @@ apply plugin: 'com.github.kt3k.coveralls'
 coveralls.jacocoReportPath = 'build/reports/coverage/debug/report.xml'
 
 // This is from 'https://github.com/chrisbanes/gradle-mvn-push'
-apply from: "${rootDir}/gradle/gradle-mvn-push.gradle"
+
+//apply from: "${rootDir}/gradle/gradle-mvn-push.gradle"
